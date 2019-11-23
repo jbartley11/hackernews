@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -21,21 +21,22 @@ const list = [
   }
 ]
 
-function App() {
+class App extends Component {
   // define variable outside of return
-  const helloWorld = 'Welcome to the road to learn react!'
-  return (
-    <div className="App">
-      {list.map(item => <div key={item.objectID}>
-                          <span>
-                            <a href={item.url}>{item.title}</a>
-                          </span>
-                          <span>{item.author}</span>
-                          <span>{item.num_comments}</span>
-                          <span>{item.points}</span>
-                        </div>)}
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        {list.map(item => <div key={item.objectID}>
+                            <span>
+                              <a href={item.url}>{item.title}</a>
+                            </span>
+                            <span>{item.author}</span>
+                            <span>{item.num_comments}</span>
+                            <span>{item.points}</span>
+                          </div>)}
+      </div>
+    );
+  }
 }
 
 export default App;
