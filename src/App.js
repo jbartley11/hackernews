@@ -34,7 +34,7 @@ class App extends Component {
 
   }
 
-  onDismiss(id) {
+  onDismiss = id => {
     const updatedList = this.state.list.filter(item => item.objectID != id);
     this.setState({list: updatedList});
   }
