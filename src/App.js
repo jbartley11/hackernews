@@ -71,13 +71,14 @@ class App extends Component {
           </Search>
         </div>
           
-      
+        { result && 
         <Table 
           list={result.hits}
           pattern={searchTerm}
           onDismiss={this.onDismiss}
         />
-
+        }
+        
       </div>
     );
   }
